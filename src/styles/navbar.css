@@ -1,0 +1,189 @@
+/* Mpbile Nav */
+.mobileMenu {
+    background-color: #1C658C;
+    width: 100%;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    justify-content: space-between;
+    padding: 12px 0 0 20px;
+}
+
+.mobileNav {
+    background-color: #1C658C;
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.mobileNavlist {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.mobileNavitem {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: right;
+    line-height: 24px;
+    color: white;
+}
+
+.mobileNavitem a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.iconMenu a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.mobileNav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+}
+
+.mobileNav a:hover {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+/* Desktop Nav */
+.nav {
+    background-color: #1C658C;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navlist {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.navitem {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: right;
+    line-height: 24px;
+}
+
+.navitem a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.logo {
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 24px;
+    text-align: left;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.3em;
+    color: white;
+}
+
+.nav a:hover {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+
+    .mobileMenu {
+        top: 0;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .mobileNav {
+        top: 3em;
+        background-color: #1C658C;
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        -webkit-transform: translate(-100%, -100%);
+        transform: translate(-100%, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .mobileNavitem {
+        display: list-item;
+        text-align: center;
+        margin-left: 80px;
+        margin-right: 80px;
+        color: #1C658C;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobileMenu {
+        display: none;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 30%;
+    }
+
+    .navlist {
+        width: 70%;
+    }
+
+    .cardlist {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .cardlist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+}

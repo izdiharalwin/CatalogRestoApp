@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.skip-link {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    background-color: #1C658C;
+    color: white;
+    padding: 12px;
+    z-index: 100;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+.content {
+    padding: 30px;
+}
+
+.explore {
+    padding: 0 0 20px 0;
+    text-align: center;
+    color: #1C658C;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.list {
+    text-align: left;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 16px
+}
+
+.city {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border-radius: 6px;
+    background-color: #1C658C;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.card_item_content {
+    padding: 16px;
+}
+
+.card_item_img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.card_item_rating {
+    font-size: 14px;
+}
+
+.card_item_title {
+    text-decoration: none;
+}
+
+.card_item_rating_value {
+    color: #1C658C;
+    font-weight: bolder;
+}
+
+.card_item_title a {
+    text-decoration: none;
+    color: #1C658C;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.card_item_desc {
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+footer {
+    background-color: #1C658C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .nav {
+        display: none;
+    }
+
+    .mobileNav {
+        background-color: deepskyblue;
+        z-index: 10;
+        width: 100%;
+        position: absolute;
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+        transition: transform 0.2s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .mobileNavitem {
+        display: list-item;
+        text-align: left;
+        color: deepskyblue;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .mobileMenu {
+        display: none;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 30%;
+    }
+
+    .navlist {
+        width: 70%;
+    }
+
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+}
